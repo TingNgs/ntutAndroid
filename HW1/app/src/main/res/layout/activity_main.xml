@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ngs.myapplication.MainActivity">
+
+    <TextView
+        style="@style/TextView_Style"
+        android:text="@string/sex_text_view" />
+
+    <EditText
+        android:id="@+id/sex_edit_text"
+        style="@style/EditText_Style"
+        android:inputType="textCapWords"
+        android:hint="@string/sex_hint"/>
+
+    <TextView
+        style="@style/TextView_Style"
+        android:text="@string/age_text_view" />
+
+    <EditText
+        android:id="@+id/age_edit_text"
+        android:inputType="number"
+        style="@style/EditText_Style" />
+
+    <Button
+        style="@style/SubmitButton_Style"
+        android:text="@string/submit_button"
+        android:onClick="SubmitFunction"/>
+
+
+    <TextView
+        android:id="@+id/result_text_view"
+        style="@style/TextView_Style"
+        android:text="Result:"/>
+
+</android.support.v7.widget.LinearLayoutCompat>

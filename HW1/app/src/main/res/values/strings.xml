@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">Marriage advice</string>
-    <string name="sex_hint">Male / Female</string>
-    <string name="sex_text_view">Sex</string>
-    <string name="age_text_view">Age</string>
+    <string name="app_name">婚姻建議</string>
+    <string name="sex_hint" translatable="false">Male / Female</string>
+    <string name="sex_text_view">性別(sex)</string>
+    <string name="age_text_view">年齡(age)</string>
     <string name="submit_button">Submit</string>
+    <string name="suggestions_text_view">Suggestions:</string>
 
     <string name="age_input_error">Age input error. Please input again!</string>
     <string name="sex_input_error">Sex input error. Please input again!</string>

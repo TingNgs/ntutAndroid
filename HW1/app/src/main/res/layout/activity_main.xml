@@ -31,10 +31,9 @@
         android:text="@string/submit_button"
         android:onClick="SubmitFunction"/>
 
-
     <TextView
         android:id="@+id/result_text_view"
         style="@style/TextView_Style"
-        android:text="Result:"/>
+        android:text="@string/suggestions_text_view"/>
 
 </android.support.v7.widget.LinearLayoutCompat>

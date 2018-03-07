@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">婚姻建議</string>
-    <string name="sex_hint" translatable="false">Male / Female</string>
+    <string name="sex_hint">Male / Female</string>
     <string name="sex_text_view">性別(sex)</string>
     <string name="age_text_view">年齡(age)</string>
     <string name="submit_button">Submit</string>

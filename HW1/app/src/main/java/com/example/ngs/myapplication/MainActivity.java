@@ -46,6 +46,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void changeResult(String result){
         TextView resultTextView = (TextView)findViewById(R.id.result_text_view);
-        resultTextView.setText("Result: "+result);
+        resultTextView.setText("Suggestions: "+result);
     }
 }

@@ -24,12 +24,13 @@
     <EditText
         android:id="@+id/age_edit_text"
         android:inputType="number"
-        style="@style/EditText_Style" />
+        style="@style/EditText_Style"
+        android:hint="@string/age_hint"/>
 
     <Button
+        android:id="@+id/submit_button"
         style="@style/SubmitButton_Style"
-        android:text="@string/submit_button"
-        android:onClick="SubmitFunction"/>
+        android:text="@string/submit_button" />
 
     <TextView
         android:id="@+id/result_text_view"

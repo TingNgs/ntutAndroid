@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private View.OnClickListener submitButtonOnClick = new View.OnClickListener(){
-        public  void onClick(View v){
+        @Override
+        public void onClick(View v){
             String sexInputed = sexEditText.getText().toString().toLowerCase();
             int ageInputed = GetAgeInteger(ageEditText.getText().toString());
             GetOutput(sexInputed,ageInputed);

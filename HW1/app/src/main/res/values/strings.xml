@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">婚姻建議</string>
+    <string name="app_name">HW#2:Ng Ho Ting</string>
     <string name="sex_hint">(Male / Female)</string>
     <string name="age_hint">(Input age)</string>
-    <string name="sex_text_view">性別(sex)</string>
-    <string name="age_text_view">年齡(age)</string>
+    <string name="sex_text_view">sex</string>
+    <string name="age_text_view">age</string>
     <string name="submit_button">Submit</string>
     <string name="suggestions_text_view">Suggestions: </string>
 

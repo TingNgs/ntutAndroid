@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context="edu.ntut.user.myhw3.MainActivity">
 
@@ -15,13 +14,27 @@
         android:text="@string/sex"
         android:textSize="18sp" />
 
-    <Spinner
-        android:id="@+id/spnSex"
+    <RadioGroup
+        android:id="@+id/radGrpSex"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/sex_list"
-        android:prompt="@string/spn_sex_list_promt"
-        android:spinnerMode="dialog" />
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radBtnSexMale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/sex_male" />
+
+        <RadioButton
+            android:id="@+id/radBtnSexFemale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/sex_female" />
+
+    </RadioGroup>
 
     <TextView
         android:id="@+id/txtAge"
@@ -30,52 +43,83 @@
         android:text="@string/age"
         android:textSize="18sp" />
 
-    <RadioGroup
-        android:id="@+id/radGrpAge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <RadioButton
-            android:id="@+id/radBtnAgeRange1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/maleAgeRange1" />
-
-        <RadioButton
-            android:id="@+id/radBtnAgeRange2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/maleAgeRange2" />
-
-        <RadioButton
-            android:id="@+id/radBtnAgeRange3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/maleAgeRange3" />
-
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/txtNumber"
+    <Spinner
+        android:id="@+id/spnAgeRange"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/family"
-        tools:textSize="18sp" />
+        android:entries="@array/maleAgeRange"
+        android:prompt="@string/spn_age_list_promt" />
 
-    <TextView
-        android:id="@+id/txtNumFamily"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/number" />
+        android:layout_height="300px">
 
-    <NumberPicker
-        android:id="@+id/numPkrFamply"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_gravity="center_horizontal" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/chkBoxMusic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/music" />
+
+            <CheckBox
+                android:id="@+id/chkBoxSing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sing" />
+
+            <CheckBox
+                android:id="@+id/chkBoxDance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dance" />
+
+            <CheckBox
+                android:id="@+id/chkBoxTravel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/travel" />
+
+            <CheckBox
+                android:id="@+id/chkBoxReading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/reading" />
+
+            <CheckBox
+                android:id="@+id/chkBoxWriting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/writing" />
+
+            <CheckBox
+                android:id="@+id/chkBoxClimbing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/climbing" />
+
+            <CheckBox
+                android:id="@+id/chkBoxSwim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/swim" />
+
+            <CheckBox
+                android:id="@+id/chkBoxEating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/eating" />
+
+            <CheckBox
+                android:id="@+id/chkBoxDrawing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/drawing" />
+        </LinearLayout>
+    </ScrollView>
 
     <Button
         android:id="@+id/btnOK"
@@ -90,5 +134,10 @@
         android:layout_height="wrap_content"
         android:text="@string/suggestion"
         android:textSize="18sp" />
-
+    <TextView
+        android:id="@+id/txtHobbies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hobbies"
+        android:textSize="18sp" />
 </LinearLayout>

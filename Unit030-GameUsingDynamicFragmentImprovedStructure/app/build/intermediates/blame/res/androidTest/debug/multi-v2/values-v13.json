@@ -1,6 +1,21 @@
 {
     "logs": [
         {
+            "outputFile": "C:\\Users\\NGS\\Desktop\\ntutAndroid-HW6\\Unit030-GameUsingDynamicFragmentImprovedStructure\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v13\\values-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\NGS\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.3.0.aar\\92134494d52dc86170057cf8e1947a84\\res\\values-v13\\values-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "58",
+                        "endOffsets": "109"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\NGS\\Desktop\\Unit030-GameUsingDynamicFragmentImprovedStructure\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v13\\values-v13.xml",
             "map": [
                 {

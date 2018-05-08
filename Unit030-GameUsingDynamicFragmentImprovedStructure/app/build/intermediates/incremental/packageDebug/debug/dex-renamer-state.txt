@@ -1,4 +1,4 @@
-#Wed Apr 25 12:29:46 CST 2018
-base.0=C\:\\Users\\NGS\\Desktop\\Unit030-GameUsingDynamicFragmentImprovedStructure\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Wed May 09 01:46:25 CST 2018
+base.0=C\:\\Users\\NGS\\Desktop\\ntutAndroid-HW6\\Unit030-GameUsingDynamicFragmentImprovedStructure\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

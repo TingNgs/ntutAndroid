@@ -2,11 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    android:orientation="vertical">
         <TextView android:id="@+id/txtTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -15,8 +11,8 @@
             android:textColor="#FF00FF"
             android:textStyle="bold"
             android:paddingTop="10dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp" />
+            android:layout_gravity="center"
+           />
 
 
         <ImageView android:id="@+id/imgViewDice"
@@ -24,45 +20,26 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"/>
 
+        <Button
+            android:id="@+id/btnPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/play"
+            android:layout_gravity="center"/>
 
         <TextView android:id="@+id/txtResult"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/result"
-            android:textSize="20sp"
-            android:textColor="#0000FF"
-            android:layout_gravity="center"/>
-    </LinearLayout>
-    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <Button
-            android:id="@+id/btnShowResult1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_show_result1"
-            android:layout_below="@id/txtResult"
-            android:textSize="20sp" />
+        android:text="@string/result"
+        android:textSize="20sp"
+        android:textColor="#0000FF"
+        android:layout_gravity="center"/>
 
         <Button
-            android:id="@+id/btnShowResult2"
+            android:id="@+id/btnShowResult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btn_show_result2"
-            android:layout_below="@id/txtResult"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/btnHiddenResult"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_hidden_result"
-            android:layout_below="@id/btnShowResult1"
-            android:layout_centerInParent="true"
-            android:textSize="20sp" />
-    </LinearLayout>
-
-
+            android:text="@string/btn_show_result"
+            android:layout_gravity="center"/>
 
 </LinearLayout>

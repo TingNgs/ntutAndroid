@@ -20,29 +20,18 @@ import android.widget.TextView;
 
 public class MainFragment extends Fragment {
 
-    public enum GameResultType {
-        TYPE_1, TYPE_2, HIDE
-    }
-
-    // 所屬的 Activity 必須實作以下介面中的callback方法
     public interface CallbackInterface {
-        public void updateGameResult(int iCountSet,
+        public void showGameResult(int iCountSet,
                                      int iCountPlayerWin,
                                      int iCountComWin,
                                      int iCountDraw);
-        public void enableGameResult(GameResultType type);
     };
 
     private CallbackInterface mCallback;
-    private EditText mEdtCountSet,mEdtCountPlayerWin,mEdtCountComWin,mEdtCountDraw;
     private ImageView mImgViewDice;
     private TextView mTxtResult;
-/*
-    public EditText mEdtCountSet,
-                    mEdtCountPlayerWin,
-                    mEdtCountComWin,
-                    mEdtCountDraw;
-*/
+    private Button btnPlay,btnShowResult;
+
 
     // 新增統計遊戲局數和輸贏的變數
     private int miCountSet = 0,
@@ -52,14 +41,6 @@ public class MainFragment extends Fragment {
 
     private boolean isDiceRolling = false;
 
-    private Button mBtnShowResult1,
-                    mBtnShowResult2,
-                    mBtnHiddenResult;
-
-    private boolean mbShowResult = false;
-
-//    private final static String TAG = "Result";
-//    private int mTagCount = 0;
 
     public MainFragment() {
         // Required empty public constructor
@@ -88,28 +69,18 @@ public class MainFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        // 必須先呼叫getView()取得程式畫面物件，然後才能呼叫它的
-        // findViewById()取得介面物件
         mTxtResult = (TextView) getView().findViewById(R.id.txtResult);
+
         mImgViewDice = (ImageView) getView().findViewById(R.id.imgViewDice);
         mImgViewDice.setImageResource(R.drawable.dice01);
-        // 以下介面元件是在另一個Fragment中，因此必須呼叫所屬的Activity
-        // 才能取得這些介面元件
-        /*mEdtCountSet = (EditText) getActivity().findViewById(R.id.edtCountSet);
-        mEdtCountPlayerWin = (EditText) getActivity().findViewById(R.id.edtCountPlayerWin);
-        mEdtCountComWin = (EditText) getActivity().findViewById(R.id.edtCountComWin);
-        mEdtCountDraw = (EditText) getActivity().findViewById(R.id.edtCountDraw);*/
 
-        mBtnShowResult1 = (Button) getView().findViewById(R.id.btnShowResult1);
-        mBtnShowResult2 = (Button) getView().findViewById(R.id.btnShowResult2);
-        mBtnHiddenResult = (Button) getView().findViewById(R.id.btnHiddenResult);
+        btnPlay = (Button)getView().findViewById(R.id.btnPlay);
+        btnShowResult = (Button)getView().findViewById(R.id.btnShowResult);
 
-        mBtnShowResult1.setOnClickListener(btnShowResult1OnClick);
-        mBtnShowResult2.setOnClickListener(btnShowResult2OnClick);
-        mBtnHiddenResult.setOnClickListener(btnHiddenResultOnClick);
-        mImgViewDice.setOnClickListener(mImgViewDoceOnClick);
+        btnPlay.setOnClickListener(playOnClick);
+        btnShowResult.setOnClickListener(showResult);
     }
-    private View.OnClickListener mImgViewDoceOnClick = new View.OnClickListener() {
+    private View.OnClickListener playOnClick = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             if(isDiceRolling) return;
@@ -146,29 +117,13 @@ public class MainFragment extends Fragment {
             miCountComWin+=1;
         }
         miCountSet+=1;
-        mCallback.updateGameResult(miCountSet,miCountPlayerWin,miCountComWin,miCountDraw);
     }
-    public void upDate(){
-        mCallback.updateGameResult(miCountSet,miCountPlayerWin,miCountComWin,miCountDraw);
-    }
-    private View.OnClickListener btnShowResult1OnClick = new View.OnClickListener() {
+    private View.OnClickListener showResult = new View.OnClickListener() {
+        @Override
         public void onClick(View v) {
-            mCallback.enableGameResult(GameResultType.TYPE_1);
-            mCallback.updateGameResult(miCountSet,miCountPlayerWin,miCountComWin,miCountDraw);
+            mCallback.showGameResult(miCountSet,miCountPlayerWin,miCountComWin,miCountDraw);
         }
     };
 
-    private View.OnClickListener btnShowResult2OnClick = new View.OnClickListener() {
-        public void onClick(View v) {
-            mCallback.enableGameResult(GameResultType.TYPE_2);
-            mCallback.updateGameResult(miCountSet,miCountPlayerWin,miCountComWin,miCountDraw);
-        }
-    };
-
-    private View.OnClickListener btnHiddenResultOnClick = new View.OnClickListener() {
-        public void onClick(View v) {
-            mCallback.enableGameResult(GameResultType.HIDE);
-        }
-    };
 
 }

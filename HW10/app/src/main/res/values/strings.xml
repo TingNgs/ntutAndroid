@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">作業十:吳浩廷</string>
+    <string name="tv_name">Name</string>
+    <string name="tv_phoneNumber">Phone Number</string>
+    <string name="tv_phoneNumberType">The Type of Phone Number</string>
+    <array name="phone_type">
+        <item>Mobile</item>
+        <item>Home</item>
+        <item>Office</item>
+    </array>
+    <string name="btn_clear">Clear</string>
+    <string name="btn_add">Adding a new contact</string>
+    <string name="tv_search">Search contact</string>
+</resources>

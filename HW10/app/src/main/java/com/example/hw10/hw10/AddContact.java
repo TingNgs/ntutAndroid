@@ -10,14 +10,10 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-/**
- * Created by NGS on 31/05/2018.
- */
-
 public class AddContact extends Fragment {
     EditText edtName, edtPhoneNumber;
     Spinner spnPhoneNumberType;
-    public AddContact() {}
+    public AddContact() { }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +22,6 @@ public class AddContact extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_add_contact, container, false);
     }
-
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -35,7 +30,6 @@ public class AddContact extends Fragment {
         edtPhoneNumber = view.findViewById(R.id.edt_PhoneNumber);
         spnPhoneNumberType = view.findViewById(R.id.spn_PhoneNumberType);
     }
-
     public ContentValues getContentValues() {
         ContentValues newData = new ContentValues();
         newData.put("name", edtName.getText().toString());
